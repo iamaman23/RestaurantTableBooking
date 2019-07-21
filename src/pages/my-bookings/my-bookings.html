@@ -1,0 +1,25 @@
+<!--
+  Generated template for the MyBookingsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>myBookings</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <ion-list *ngFor="let b of bookings; let i=index">
+    <a ion-item (click)="openModal({charNum: i})">
+      {{b.restaurant}}
+    </a>
+  </ion-list>
+</ion-content>

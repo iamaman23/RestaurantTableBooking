@@ -1,0 +1,63 @@
+<!--
+  Generated template for the DetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="myColor">
+    <ion-title>details</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <!-- <ion-slides pager class="slides">
+
+    <ion-slide>
+      <img src="{{identification.url}}" alt="">
+    </ion-slide>
+  
+    <ion-slide>
+      <h2>Slide 2</h2>
+    </ion-slide>
+  
+    <ion-slide>
+      <h2>Slide 3</h2>
+    </ion-slide>
+  
+  </ion-slides> -->
+  <!-- <div padding> 
+    <h1><strong>{{identification.name}}</strong></h1>
+    <h3>{{identification.rating}}<ion-icon name="star"></ion-icon></h3>
+    <h6 style="color:red">Tables Available:{{identification.tables_available}}</h6>
+    <h6 style="color: #0404f4">{{identification.address}}</h6>
+    <h6 style="color: #f404f4">{{identification.data}}</h6>
+  </div>
+  <ion-fab right bottom style="padding-bottom: 15px;">
+      <button ion-fab color="dark"><ion-icon name="arrow-dropup"></ion-icon></button>
+      <ion-fab-list side="top">
+        <button ion-fab><ion-icon name="restaurant"></ion-icon></button>
+        <button ion-fab><ion-icon name="bookmark"></ion-icon></button>
+      </ion-fab-list>
+    </ion-fab>
+    <img src="../../assets/imgs/icons8-restaurant-table-filled-50.png" class="imageDetails"> -->
+    <ion-card *ngFor="let i of identification; let i of index" (click)="getDetails(i)">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-3>
+            <div>
+              <img src="{{i.url}}">
+            </div>
+          </ion-col>
+          <ion-col col-9 text-wrap>
+            <h2><strong>{{i.name}}</strong></h2>
+            <h4 style="color:#ff001a">{{i.address}}</h4>
+          </ion-col>  
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+  
+  </ion-content>

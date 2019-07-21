@@ -1,18 +1,53 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
+  <ion-navbar color="myColor">
+    <button ion-button menuToggle color="dark">
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <button ion-button color="dark" right-top (click)="logout()">
+      <ion-icon name="menu"></ion-icon>
+    </button>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+<ion-content class="card-background-page" style="background-color: #00ff66">
+  <ion-grid no-padding>
+    <ion-row justify-content-center>
+      <ion-col *ngFor="let c of coll; let i of index" col-6>
+        <ion-card (click)="getId(i)">
+          <img style="opacity: 0.8" src="{{c.url}}" />
+          <div class="card-title">{{c.name}}</div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-fab right bottom>
+    <button ion-button color="#6600ff" round right-bottom icon-only (click)="initializeRestros()">
+      <ion-icon name="search"></ion-icon>
+    </button>
+  </ion-fab>
 </ion-content>
+  
+  
+  <!-- <ion-searchbar
+    [showCancelButton]="shouldShowCancel"
+    (ionInput)="getRestro($event)"
+    (ionCancel)="deleteData()"
+    placeholder="Search Restaurant">
+  </ion-searchbar>
+  <ion-list>
+    <ion-item *ngFor="let item of resNames">
+      <h2>{{ item.name }}</h2>
+    </ion-item>
+  </ion-list>
+  <ion-card *ngFor="let r of restaurantData; let i of index" (click)="getId(i)">
+    <img src="{{r.url}}"/>
+    <ion-card-content>
+      <ion-card-title>
+       <h1><strong>{{r.name}}</strong></h1> 
+        </ion-card-title>
+      <p style="font-size: 17px">
+        {{r.data}}
+      </p>
+    </ion-card-content>
+  </ion-card> -->
+  

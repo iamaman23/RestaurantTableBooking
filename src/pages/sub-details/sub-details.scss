@@ -1,0 +1,16 @@
+page-sub-details {
+    .slides{
+        width: 100% !important;
+        height: 150px;
+    }
+    img{
+        width: 100% !important;
+    }
+    .swiper-pagination-bullet-active {
+        background: black;
+        opacity: 1;
+    }
+    #my-map{
+        height: 25%;
+    }
+}

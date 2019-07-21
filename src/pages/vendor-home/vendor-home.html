@@ -1,0 +1,42 @@
+<!--
+  Generated template for the VendorHomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>vendorHome</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list >
+    <h2>Table For 2</h2>
+    <ion-item *ngFor="let t of tablefor2" >
+      <ion-label> Table {{t}}</ion-label>
+      <ion-toggle (ionChange)="callMe2($event)"></ion-toggle>
+    
+    </ion-item>
+  </ion-list>
+  <ion-list >
+      <h2>Table For 4</h2>
+      <ion-item *ngFor="let t of tablefor4" >
+        <ion-label> Table {{t}}</ion-label>
+        <ion-toggle (ionChange)="callMe4($event)"></ion-toggle>
+      
+      </ion-item>
+    </ion-list>
+    <ion-list >
+        <h2>Table For 6</h2>
+        <ion-item *ngFor="let t of tablefor6" >
+          <ion-label> Table {{t}}</ion-label>
+          <ion-toggle (ionChange)="callMe6($event)"></ion-toggle>
+        
+        </ion-item>
+      </ion-list>
+    
+</ion-content>
